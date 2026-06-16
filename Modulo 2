@@ -1,0 +1,47 @@
+Create database Veterinaria;
+
+use Veterinaria; 
+
+Create table Clientes(
+    Rut int() primary, 
+    nombre varchar(50),
+    apellido varchar(50),
+    pronombre varchar (10),
+    N° contacto int(20),
+    Direccion varchar(200)
+)
+
+Create table Mascotas(
+    chip_identificador int() primary,
+    nombre varchar(55), 
+    especie varchar(55),
+    peso float(20),
+    tamaño float(20),
+    edad int(5),
+    genero varchar()
+)
+
+
+Create table Antecedentes(
+    id int() auto primary,
+    chip_identificador int() not null,
+    alergia varchar(200),
+    patologia varchar (200),
+    medicamentos varchar (200)
+)
+
+Create table Medico(
+    Id medico int(200) auto primary,
+    nombre varchar(50), 
+    apellido varchar(50),
+    especialidad varchar(50)
+)
+
+Create table Citas (
+    id cita int(255) auto primary,
+    rut_cliente int(255) not null, 
+    id_medico int(200) not null,
+    especialidad varchar(50),
+    fecha date,
+    hora hours
+)
